@@ -47,6 +47,6 @@ function playGame() {
     }
     
     else {
-        console.log(`Oh... Such a shame. ${player}:${computer} looks like overall you LOSE!`);
+        console.log(`Oh... Such a shame. ${player}:${computer} looks like overall your LOSE!`);
     }
 }
