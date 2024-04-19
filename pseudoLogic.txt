@@ -1,5 +1,6 @@
 #Pseudo logic for the rock paper scissors game
 GET user-input
+CONVERT user-input to lowercase and trim
 IF user-input is NOT a string from among rock|paper|scissors
     PRINT error message
     ABORT
