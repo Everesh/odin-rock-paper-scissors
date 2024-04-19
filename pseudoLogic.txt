@@ -1,0 +1,9 @@
+#Pseudo logic for the rock paper scissors game
+GET user-input
+IF user-input is NOT a string from among rock|paper|scissors
+    PRINT error message
+    ABORT
+INIT computer-value as a int ranging from 0 to 2
+CONVERT user-input into a int ranging from 0 to 2
+DETERMINE winner by comparing user-input and computer-input
+PRINT results
