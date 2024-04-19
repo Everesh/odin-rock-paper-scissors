@@ -43,7 +43,7 @@
 
         function rockPaperScissors(){
             let usrInput = prompt("Rock, Paper or the dreaded Scissors, whichever weapon will you choose?");
-            usrInput.toLowerCase().trim();
+            usrInput = usrInput.toLowerCase().trim();
             if (usrInput != "rock" && usrInput != "paper" && usrInput != "scissors") {
                 console.log(`${usrInput}? ${usrInput.toUpperCase()}?!? Learn to follow directions, heathen!`);
                 return;
