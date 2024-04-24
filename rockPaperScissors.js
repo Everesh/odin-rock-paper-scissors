@@ -5,7 +5,7 @@ function getComputerChoice() {
 
 function playRound(player) {
     if (player != "rock" && player != "paper" && player != "scissors"){
-        return `You heathen! "${player}"?! What sort of response is that?`;
+        return [-1,`You heathen! "${player}"?! What sort of response is that?`];
     }
     let computer = getComputerChoice();
     return (player == computer) ? [2,`${player}, eh? Good choice. I made the same... Its a DRAW!`] :
