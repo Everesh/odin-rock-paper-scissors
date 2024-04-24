@@ -19,6 +19,7 @@ body > * {
 }
 
 .rowContainer {
+    margin-top: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +28,6 @@ body > * {
 }
 
 .button {
-    margin-top: 2em;
     background-color: #222;
     border: 0.2em solid #e3dacf;
     border-radius: 1em;
@@ -46,4 +46,58 @@ body > * {
 .button:active {
     background-color: #e3dacf;
     color:#222;
+}
+
+.rowConstriction {
+    flex: 0 1 45em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.scoreContainer {
+    border: 0.1em solid #e3dacf;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.scoreContainer > * {
+    margin: 0;
+}
+
+.score {
+    font-size: 2em;
+}
+
+.banterBoard {
+    flex: 0 1 30em;
+}
+
+.banter {
+    margin: 0;
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+.banter:nth-child(odd){
+    background-color: #333;
+}
+
+.banter:first-child {
+    font-weight: bold;
+    color: #333;
+    background-color: #e3dacf;
+}
+
+.controlContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button.control {
+    width: 4em;
+    height: 3em;
 }
