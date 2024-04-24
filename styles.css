@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    color: #e3dacf;
+    font-family: monospace;
+}
+
 body {
     display: flex;
     flex-wrap: wrap;
@@ -9,7 +15,35 @@ body {
 
 body > * {
     flex: 1 0 100%;
-    color: #e3dacf;
     text-align: center;
-    font-family: monospace;
+}
+
+.rowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.button {
+    margin-top: 2em;
+    background-color: #222;
+    border: 0.2em solid #e3dacf;
+    border-radius: 1em;
+    width: 12em;
+    height: 6em;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+.button:focus {
+    outline:0.2em solid #e3dacf;
+}
+
+.button:active {
+    background-color: #e3dacf;
+    color:#222;
 }
