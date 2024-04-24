@@ -94,12 +94,13 @@ body > * {
 
 .controlContainer {
     display: flex;
-    justify-content: space-between;
+    gap: 0.5em;
 }
 
 .button.control {
     width: 4.2em;
     height: 3em;
+    flex: 1 1 auto;
 }
 
 #resetAll {
