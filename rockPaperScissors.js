@@ -20,26 +20,31 @@ const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
 const banterBoard = document.querySelector(".banterBoard");
+const winnerPane = document.querySelector(".winnerPane");
 const scoreMe = document.querySelector("#scoreMe");
 const scoreComputer = document.querySelector("#scoreComputer");
+let currentScoreMe = parseInt(scoreMe.textContent);
+let currentScoreComputer = parseInt(scoreComputer.textContent);
 
 const resetAll = document.querySelector("#resetAll");
 const resetBanter = document.querySelector("#resetBanter");
 
 rock.addEventListener("click", () => {
     let outcome = playRound("rock");
-    let currentScoreMe = parseInt(scoreMe.textContent);
-    let currentScoreComputer = parseInt(scoreComputer.textContent);
 
     if (outcome[0] == 0) {
-        scoreMe.textContent = currentScoreMe + 1;
+        scoreMe.textContent = ++currentScoreMe;
+        if (currentScoreMe >= 5 && winnerPane.classList.contains("hidden")){
+            winnerPane.classList.remove("hidden");
+            winnerPane.textContent = "You Won!"
+        }
     }
     else if (outcome[0] == 1) {
-        scoreComputer.textContent = currentScoreComputer + 1;
-    }
-    else {
-        scoreMe.textContent = currentScoreMe + 1;
-        scoreComputer.textContent = currentScoreComputer + 1;
+        scoreComputer.textContent = ++currentScoreComputer;
+        if (currentScoreComputer >= 5 && winnerPane.classList.contains("hidden")){
+            winnerPane.classList.remove("hidden");
+            winnerPane.textContent = "Computer Won!"
+        }
     }
 
     const banter = document.createElement("p");
@@ -50,18 +55,20 @@ rock.addEventListener("click", () => {
 
 paper.addEventListener("click", () => {
     let outcome = playRound("paper");
-    let currentScoreMe = parseInt(scoreMe.textContent);
-    let currentScoreComputer = parseInt(scoreComputer.textContent);
 
     if (outcome[0] == 0) {
-        scoreMe.textContent = currentScoreMe + 1;
+        scoreMe.textContent = ++currentScoreMe;
+        if (currentScoreMe >= 5 && winnerPane.classList.contains("hidden")){
+            winnerPane.classList.remove("hidden");
+            winnerPane.textContent = "You Won!"
+        }
     }
     else if (outcome[0] == 1) {
-        scoreComputer.textContent = currentScoreComputer + 1;
-    }
-    else {
-        scoreMe.textContent = currentScoreMe + 1;
-        scoreComputer.textContent = currentScoreComputer + 1;
+        scoreComputer.textContent = ++currentScoreComputer;
+        if (currentScoreComputer >= 5 && winnerPane.classList.contains("hidden")){
+            winnerPane.classList.remove("hidden");
+            winnerPane.textContent = "Computer Won!"
+        }
     }
 
     const banter = document.createElement("p");
@@ -72,18 +79,20 @@ paper.addEventListener("click", () => {
 
 scissors.addEventListener("click", () => {
     let outcome = playRound("scissors");
-    let currentScoreMe = parseInt(scoreMe.textContent);
-    let currentScoreComputer = parseInt(scoreComputer.textContent);
 
     if (outcome[0] == 0) {
-        scoreMe.textContent = currentScoreMe + 1;
+        scoreMe.textContent = ++currentScoreMe;
+        if (currentScoreMe >= 5 && winnerPane.classList.contains("hidden")){
+            winnerPane.classList.remove("hidden");
+            winnerPane.textContent = "You Won!"
+        }
     }
     else if (outcome[0] == 1) {
-        scoreComputer.textContent = currentScoreComputer + 1;
-    }
-    else {
-        scoreMe.textContent = currentScoreMe + 1;
-        scoreComputer.textContent = currentScoreComputer + 1;
+        scoreComputer.textContent = ++currentScoreComputer;
+        if (currentScoreComputer >= 5 && winnerPane.classList.contains("hidden")){
+            winnerPane.classList.remove("hidden");
+            winnerPane.textContent = "Computer Won!"
+        }
     }
 
     const banter = document.createElement("p");
@@ -93,9 +102,12 @@ scissors.addEventListener("click", () => {
 });
 
 resetAll.addEventListener("click", () => {
-    scoreMe.textContent = "0";
-    scoreComputer.textContent = "0";
+    currentScoreMe = 0;
+    currentScoreComputer = 0;
+    scoreMe.textContent = 0;
+    scoreComputer.textContent = 0;
     banterBoard.textContent = "";
+    winnerPane.classList.add("hidden");
 });
 
 resetBanter.addEventListener("click", () => {

@@ -59,9 +59,9 @@ body > * {
 
 .scoreContainer {
     border: 0.1em solid #e3dacf;
-    border-radius: 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
     padding: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .scoreContainer > * {
@@ -98,6 +98,28 @@ body > * {
 }
 
 .button.control {
-    width: 4em;
+    width: 4.2em;
     height: 3em;
+}
+
+#resetAll {
+    border-radius: 0 0 0 0.5em;
+}
+
+#resetBanter {
+    border-radius: 0 0 0.5em 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.winnerPane {
+    background-color: #e3dacf;
+    color:#222;
+    font-weight: bold;
+    border-radius: 0.5em;
+    width: 100%;
+    padding: 1em;
+    margin-top: 1em;
 }
